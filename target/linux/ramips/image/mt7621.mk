@@ -312,11 +312,8 @@ define Device/xiaomi_mir4
   IMAGE/rootfs0.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
   DEVICE_TITLE := Xiaomi Mi Router 4
-  SUPPORTED_DEVICES += R4
-  SUPPORTED_DEVICES += mir4
   DEVICE_PACKAGES := \
-  kmod-mt7603 kmod-mt76x2 wpad-basic \
-  uboot-envtools
+  kmod-mt7603 kmod-mt76x2  wpad-basic uboot-envtools
 endef
 TARGET_DEVICES += xiaomi_mir4
 
