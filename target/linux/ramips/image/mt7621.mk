@@ -293,18 +293,20 @@ define Device/xiaomi_mir3g
   SUPPORTED_DEVICES += R3G
   SUPPORTED_DEVICES += mir3g
   DEVICE_PACKAGES := \
-	kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport wpad-basic \
+	kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport \
 	uboot-envtools
 endef
 TARGET_DEVICES += xiaomi_mir3g
 
 
 define Device/xiaomi_mir4
+  DTS := XIAOMI-MI4
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   KERNEL_SIZE := 4096k
   IMAGE_SIZE := 124416k
   UBINIZE_OPTS := -E 5
+  BOARD_NAME := mir4
   IMAGES += kernel1.bin rootfs0.bin
   IMAGE/kernel1.bin := append-kernel
   IMAGE/rootfs0.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
@@ -312,7 +314,9 @@ define Device/xiaomi_mir4
   DEVICE_TITLE := Xiaomi Mi Router 4
   SUPPORTED_DEVICES += R4
   SUPPORTED_DEVICES += mir4
-  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 wpad-openssl uboot-envtools
+  DEVICE_PACKAGES := \
+  kmod-mt7603 kmod-mt76x2 wpad-basic \
+  uboot-envtools
 endef
 TARGET_DEVICES += xiaomi_mir4
 
