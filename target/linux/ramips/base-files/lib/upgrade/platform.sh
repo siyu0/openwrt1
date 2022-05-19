@@ -62,6 +62,7 @@ platform_do_upgrade() {
 	ubnt-erx-sfp|\
 	xiaomi,mir3g|\
 	xiaomi,mir3p|\
+	xiaomi,mir4|\
 	xiaomi,mi-ac2100|\
 	xiaomi,redmi-ac2100)
 		nand_do_upgrade "$1"
