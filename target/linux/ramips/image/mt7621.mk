@@ -335,9 +335,13 @@ define Device/xiaomi_mir4
   IMAGE/kernel1.bin := append-kernel
   IMAGE/rootfs0.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
-  DEVICE_VENDOR := Xiaomi
-  DEVICE_MODEL := Mi Router 4
   DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 wpad-openssl uboot-envtools
+endef
+
+define Device/xiaomi_mir4
+  $(Device/xiaomi_mir4)
+  DTS := xiaomi_mir4
+  DEVICE_TITLE := Xiaomi Mi Router 4
 endef
 TARGET_DEVICES += xiaomi_mir4
 
