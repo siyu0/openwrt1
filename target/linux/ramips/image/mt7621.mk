@@ -340,7 +340,7 @@ endef
 
 define Device/xiaomi_mir4
   $(Device/xiaomi_mir4)
-  DTS := xiaomi_mir4
+  DTS := XIAOMI-MI4
   DEVICE_TITLE := Xiaomi Mi Router 4
 endef
 TARGET_DEVICES += xiaomi_mir4
